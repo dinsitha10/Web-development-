@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>my portfolio</title>
+    <style>
+      body{
+        font-family:arial,sans-serif;
+        margin:0;
+        padding:0;
+        background-color:#f4f4f4;
+        color:#333;
+      }
+      header{
+        background-color:#333;
+        color:pink;
+        padding:10px 0;
+        text-align:center;
+      }
+      nav{
+        background-color:#444;
+        overflow:hidden;
+      }
+      nav ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        text-align:center;
+      }
+      nav ul li{
+        display:inline;
+        margin-right:10px;
+      }
+      nav ul li a{
+        color:pink;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: inline-block;
+      }
+      nav ul li a:hover{
+        background-color: #575757;
+      }
+      section{
+        padding: 20px;
+        margin: 20px 0;
+        background-color: pink;
+        border-radius: 5px;
+      }
+      .skill {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+      }
+      footer{
+        background-color: #333;
+        color:pink;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      form label{
+        display: block;
+        margin: 10px 0 5px;
+      }
+      form input,form textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      form button{
+        padding: 10px 20px;
+        background-color: #333;
+        color: pink;
+        border: none;
+        border-radius: 5px;
+        cursor:pointer;
+      }
+      form button:hover{
+        background-color: #555;
+      }
+      #about{
+        justify-content: start;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my portfolio</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+  <section id="about">
+    <h2>About me</h2><br>
+    <div><p><br>Hello I'm dolly piniminti,a passionate web developer with expertise in creating dynamic and responsive websites.I am extremely enthusiastic<br>
+    about learning full-stack development,and I am currently focused on front-end development.</p></div>
+  </section>
+  <section id="skills">
+    <h2>skills</h2>
+    <div class="skill">
+      <h3>HTML & CSS</h3>
+      <P>proficient in creating responsive web design using HTML and CSS.</P>
+    </div>
+    <div class="skill">
+    <h3> JavaScript</h3>
+    <p>Experienced in building interactive web application using javascript.</p>
+    </div>
+    <div class="skill">
+      <h3>python</h3>
+      <p>Familier with python for scripting and data analysis.</p>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>contact</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <input type="message" id="message" name="message" required>
+      <button type="submit">send</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy;2024 piniminti dolly.All Right Reserved.</p>
+  </footer>
+  <script>
+    document.getElementsById('contact-form').addEventListener('submit',function(event){
+      event.preventDefault();
+      const name= document.getElementById('name').value;
+      const email= document.getElementById('email').value;
+      const message= document.getElementById('message').value;
+      alert("thank you,${name} your message has been sent.");
+    });
+  </script>
+</body>
+</html>
